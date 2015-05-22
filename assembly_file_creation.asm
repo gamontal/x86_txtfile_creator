@@ -11,7 +11,7 @@
 
 	border3 db "±", '$'
 	
-	header db "  File creation  ", '$'
+	header db "  File creation test  ", '$'
 
 	notif db "New form? Press [s] Exit without saving? Press [n]", '$'
 
