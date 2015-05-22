@@ -7,13 +7,11 @@
 
 	border1 db 50 dup("_"),'$' 
 
-	border2 db "Â³", '$'
+	border2 db "³", '$'
 
-	border3 db "Â±", '$'
+	border3 db "±", '$'
 	
 	header db "  File creation test  ", '$'
-
-	notif db "New form? Press [s] Exit without saving? Press [n]", '$'
 
 	c db ?
 
