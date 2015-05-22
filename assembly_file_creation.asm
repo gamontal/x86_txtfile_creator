@@ -7,9 +7,9 @@
 
 	border1 db 50 dup("_"),'$' 
 
-	border2 db "³", '$'
+	border2 db "Â³", '$'
 
-	border3 db "±", '$'
+	border3 db "Â±", '$'
 	
 	header db "  File creation  ", '$'
 
@@ -22,8 +22,7 @@
         msg1 db "Enter the file name :", "$"
 
 	msg2 db "File has been created successfully.", "$"
-
-
+	
 .code
 
 	main proc
@@ -31,10 +30,8 @@
         mov  ax,@data
   	mov  ds,ax
 
-
 	mov c, 2
               
-
 	mov ah, 6 
 	mov al, 0 
 	mov ch, 0                 
@@ -44,7 +41,6 @@
 	mov bh, 00000111b  
 	INT 10h  
         
-	
 	; header attributes       
 	
 	mov ah, 6 
@@ -66,8 +62,7 @@
         mov  dx,offset header
     	int  21h
   
-
-	; right-shadow
+	; right-side-shadow
 
 	mov ah, 6 
 	mov al, 0 
@@ -88,8 +83,6 @@
 	mov dl, 65       
 	mov bh, 10000000b  
 	INT 10h
-
-
 
 	;set-borders
 					     
@@ -113,10 +106,8 @@
         mov  dx,offset border1
     	int  21h
 
-
 	mov cx, 20
 	
-
 	mov cx, 20
 	VERRIGHT:
 
@@ -136,8 +127,6 @@
 
 	;borders [end]
 
-
-
 	mov ah, 6 
 	mov al, 0 
 	mov ch, 2    
@@ -156,13 +145,11 @@
 
 .startup
 
-
 	mov ah, 2 
 	mov dh, 8
 	mov dl, 19
 	mov bh, 0 
 	INT 10h
-
 
 	print msg1
 	mov di, offset fn
@@ -184,7 +171,6 @@
 	mov [di], al
 	inc di
 	jmp read
-	
 
 	crte:
 
@@ -199,15 +185,10 @@
 	mov bh, 0 
 	INT 10h
 
-
 	print msg2
-
 .exit
 
-
 main endp
-
-
 end main
 
 
