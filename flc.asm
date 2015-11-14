@@ -7,9 +7,9 @@
 
 	border1 db 50 dup("_"),'$' 
 
-	border2 db "³", '$'
+	border2 db "Â³", '$'
 
-	border3 db "±", '$'
+	border3 db "Â±", '$'
 	
 	header db "  File creation test  ", '$'
 
